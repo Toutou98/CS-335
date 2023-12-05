@@ -1,0 +1,79 @@
+AutoAttach table
+_uuid mappings system_description system_name
+----- -------- ------------------ -----------
+
+Bridge table
+_uuid                                auto_attach controller datapath_id        datapath_type datapath_version external_ids fail_mode  flood_vlans flow_tables ipfix mcast_snooping_enable mirrors name  netflow other_config                                          ports                                                                                                                                                                                                                                                                      protocols rstp_enable rstp_status sflow status                                                                                               stp_enable
+------------------------------------ ----------- ---------- ------------------ ------------- ---------------- ------------ ---------- ----------- ----------- ----- --------------------- ------- ----- ------- ----------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------- ----------- ----------- ----- ---------------------------------------------------------------------------------------------------- ----------
+a754a753-e2e5-4e2d-98bf-984cc45340a3 []          []         "000052a754a72d4e" ""            "<unknown>"      {}           standalone []          {}          []    false                 []      "br0" []      {stp-priority="1", stp-system-id="11:11:11:11:11:11"} [2310173f-08fa-4ebd-9af8-ec19980e9123, 42c06c3a-6c67-4533-8d55-632ac00597e8, 8f62ec04-fafe-45bc-8312-6b0ff464b8db, a79e8cd4-661e-49a5-9a67-9f54f2fa2c3f, dadfeccc-74ab-4295-a8fd-cfb66bd6d3f3, e3489b77-039c-4931-b65e-4b70290b3c3f, e717cfe3-077b-46f0-b336-e6b990cf472d] []        false       {}          []    {stp_bridge_id="0001.111111111111", stp_designated_root="0001.111111111111", stp_root_path_cost="0"} true      
+
+Controller table
+_uuid connection_mode controller_burst_limit controller_rate_limit enable_async_messages external_ids inactivity_probe is_connected local_gateway local_ip local_netmask max_backoff other_config role status target
+----- --------------- ---------------------- --------------------- --------------------- ------------ ---------------- ------------ ------------- -------- ------------- ----------- ------------ ---- ------ ------
+
+Flow_Sample_Collector_Set table
+_uuid bridge external_ids id ipfix
+----- ------ ------------ -- -----
+
+Flow_Table table
+_uuid external_ids flow_limit groups name overflow_policy prefixes
+----- ------------ ---------- ------ ---- --------------- --------
+
+IPFIX table
+_uuid cache_active_timeout cache_max_flows external_ids obs_domain_id obs_point_id other_config sampling targets
+----- -------------------- --------------- ------------ ------------- ------------ ------------ -------- -------
+
+Interface table
+_uuid                                admin_state bfd bfd_status cfm_fault cfm_fault_status cfm_flap_count cfm_health cfm_mpid cfm_remote_mpids cfm_remote_opstate duplex error external_ids ifindex ingress_policing_burst ingress_policing_rate lacp_current link_resets link_speed  link_state lldp mac mac_in_use          mtu  mtu_request name          ofport ofport_request options other_config statistics                                                                                                                                                                                   status                                                        type    
+------------------------------------ ----------- --- ---------- --------- ---------------- -------------- ---------- -------- ---------------- ------------------ ------ ----- ------------ ------- ---------------------- --------------------- ------------ ----------- ----------- ---------- ---- --- ------------------- ---- ----------- ------------- ------ -------------- ------- ------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------- --------
+9a0e9b67-c7ff-4e5b-8ed8-dc7e23a1b3ea down        {}  {}         []        []               []             []         []       []               []                 []     []    {}           3       0                      0                     []           0           []          down       {}   []  "52:a7:54:a7:2d:4e" 1500 []          "br0"         65534  []             {}      {}           {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=91194, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}                    {driver_name=openvswitch}                                     internal
+90a15e01-8544-462e-900d-670bb09efe6a up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           1758    0                      0                     []           0           10000000000 up         {}   []  "f2:c5:f6:be:72:31" 1500 []          "9-ETHZ"      1      []             {}      {}           {collisions=0, rx_bytes=233768, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=3417, tx_bytes=68072790, tx_dropped=0, tx_errors=0, tx_packets=1266551}   {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+7f644048-fe45-4444-915b-3fd969e66342 up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           1764    0                      0                     []           0           10000000000 up         {}   []  "b2:0c:be:69:c3:d3" 1500 []          "9-EPFL"      2      []             {}      {}           {collisions=0, rx_bytes=192964, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=2726, tx_bytes=68128024, tx_dropped=0, tx_errors=0, tx_packets=1267395}   {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+098a2928-731b-497d-8fde-560970e1928b up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           1768    0                      0                     []           0           10000000000 up         {}   []  "f2:4a:fe:0d:2b:f9" 1500 []          "9-student_1" 3      []             {}      {}           {collisions=0, rx_bytes=72562, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=981, tx_bytes=64999078, tx_dropped=0, tx_errors=0, tx_packets=1227337}     {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+8e8d5249-564f-4072-8407-c4c8736ccd02 up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           1772    0                      0                     []           0           10000000000 up         {}   []  "fe:ef:83:bc:fd:62" 1500 []          "9-staff_1"   4      []             {}      {}           {collisions=0, rx_bytes=154780, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1810, tx_bytes=64951782, tx_dropped=0, tx_errors=0, tx_packets=1226285}   {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+ed9685ae-3d49-4e90-b2c6-b537629b57ed up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           1798    0                      0                     []           0           10000000000 up         {}   []  "12:d8:d1:65:ac:4a" 1500 []          GENErouter    5      []             {}      {}           {collisions=0, rx_bytes=6545196, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=84425, tx_bytes=61936884, tx_dropped=0, tx_errors=0, tx_packets=1187472} {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+c386ccb8-150c-48dc-9f9d-c7554567e35b up          {}  {}         []        []               []             []         []       []               []                 full   []    {}           12710   0                      0                     []           1           10000000000 up         {}   []  "06:cf:d7:7b:e1:7b" 1500 []          "9-vpn_1"     6      []             {}      {}           {collisions=0, rx_bytes=46506, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=663, tx_bytes=67814332, tx_dropped=0, tx_errors=0, tx_packets=1260840}     {driver_name=veth, driver_version="1.0", firmware_version=""} ""      
+
+Manager table
+_uuid connection_mode external_ids inactivity_probe is_connected max_backoff other_config status target
+----- --------------- ------------ ---------------- ------------ ----------- ------------ ------ ------
+
+Mirror table
+_uuid external_ids name output_port output_vlan select_all select_dst_port select_src_port select_vlan snaplen statistics
+----- ------------ ---- ----------- ----------- ---------- --------------- --------------- ----------- ------- ----------
+
+NetFlow table
+_uuid active_timeout add_id_to_interface engine_id engine_type external_ids targets
+----- -------------- ------------------- --------- ----------- ------------ -------
+
+Open_vSwitch table
+_uuid                                bridges                                cur_cfg datapath_types   db_version external_ids                iface_types                                                              manager_options next_cfg other_config ovs_version ssl statistics system_type system_version
+------------------------------------ -------------------------------------- ------- ---------------- ---------- --------------------------- ------------------------------------------------------------------------ --------------- -------- ------------ ----------- --- ---------- ----------- --------------
+bcf51500-743b-4fbe-8bed-a4a7cf0a0d17 [a754a753-e2e5-4e2d-98bf-984cc45340a3] 19      [netdev, system] "7.14.0"   {hostname="", system-id=""} [geneve, gre, internal, ipsec_gre, lisp, patch, stt, system, tap, vxlan] []              19       {}           "2.6.2"     []  {}         debian      "9"           
+
+Port table
+_uuid                                bond_active_slave bond_downdelay bond_fake_iface bond_mode bond_updelay external_ids fake_bridge interfaces                             lacp mac name          other_config qos rstp_statistics rstp_status statistics                                                 status                                                                                      tag trunks   vlan_mode
+------------------------------------ ----------------- -------------- --------------- --------- ------------ ------------ ----------- -------------------------------------- ---- --- ------------- ------------ --- --------------- ----------- ---------------------------------------------------------- ------------------------------------------------------------------------------------------- --- -------- ---------
+e717cfe3-077b-46f0-b336-e6b990cf472d []                0              false           []        0            {}           false       [7f644048-fe45-4444-915b-3fd969e66342] []   []  "9-EPFL"      {}           []  {}              {}          {stp_error_count=0, stp_rx_count=16, stp_tx_count=1178615} {stp_port_id="8003", stp_role=designated, stp_sec_in_state="2372712", stp_state=forwarding} []  [10, 20] []       
+2310173f-08fa-4ebd-9af8-ec19980e9123 []                0              false           []        0            {}           false       [90a15e01-8544-462e-900d-670bb09efe6a] []   []  "9-ETHZ"      {}           []  {}              {}          {stp_error_count=0, stp_rx_count=26, stp_tx_count=1178640} {stp_port_id="8001", stp_role=designated, stp_sec_in_state="2372722", stp_state=forwarding} []  [10, 20] []       
+a79e8cd4-661e-49a5-9a67-9f54f2fa2c3f []                0              false           []        0            {}           false       [8e8d5249-564f-4072-8407-c4c8736ccd02] []   []  "9-staff_1"   {}           []  {}              {}          {stp_error_count=0, stp_rx_count=0, stp_tx_count=1178601}  {stp_port_id="8005", stp_role=designated, stp_sec_in_state="2372683", stp_state=forwarding} 10  []       []       
+42c06c3a-6c67-4533-8d55-632ac00597e8 []                0              false           []        0            {}           false       [098a2928-731b-497d-8fde-560970e1928b] []   []  "9-student_1" {}           []  {}              {}          {stp_error_count=0, stp_rx_count=0, stp_tx_count=1170358}  {stp_port_id="8006", stp_role=designated, stp_sec_in_state="2355991", stp_state=forwarding} 20  []       []       
+8f62ec04-fafe-45bc-8312-6b0ff464b8db []                0              false           []        0            {}           false       [c386ccb8-150c-48dc-9f9d-c7554567e35b] []   []  "9-vpn_1"     {}           []  {}              {}          {stp_error_count=0, stp_rx_count=6, stp_tx_count=1178625}  {stp_port_id="8002", stp_role=designated, stp_sec_in_state="2356022", stp_state=forwarding} []  []       []       
+e3489b77-039c-4931-b65e-4b70290b3c3f []                0              false           []        0            {}           false       [ed9685ae-3d49-4e90-b2c6-b537629b57ed] []   []  GENErouter    {}           []  {}              {}          {stp_error_count=0, stp_rx_count=0, stp_tx_count=1178606}  {stp_port_id="8004", stp_role=designated, stp_sec_in_state="2372688", stp_state=forwarding} []  []       []       
+dadfeccc-74ab-4295-a8fd-cfb66bd6d3f3 []                0              false           []        0            {}           false       [9a0e9b67-c7ff-4e5b-8ed8-dc7e23a1b3ea] []   []  "br0"         {}           []  {}              {}          {}                                                         {}                                                                                          []  []       []       
+
+QoS table
+_uuid external_ids other_config queues type
+----- ------------ ------------ ------ ----
+
+Queue table
+_uuid dscp external_ids other_config
+----- ---- ------------ ------------
+
+SSL table
+_uuid bootstrap_ca_cert ca_cert certificate external_ids private_key
+----- ----------------- ------- ----------- ------------ -----------
+
+sFlow table
+_uuid agent external_ids header polling sampling targets
+----- ----- ------------ ------ ------- -------- -------

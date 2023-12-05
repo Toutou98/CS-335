@@ -1,0 +1,36 @@
+Building configuration...
+
+Current configuration:
+!
+frr version 7.2.1
+frr defaults traditional
+hostname GENE_router
+no ipv6 forwarding
+!
+interface GENE-L2.10
+ ip address 9.200.0.1/24
+!
+interface GENE-L2.20
+ ip address 9.200.1.1/24
+!
+interface lo
+ ip address 9.154.0.1/24
+!
+interface port_MIAM
+ ip address 9.0.9.1/24
+ ip ospf cost 100
+!
+interface port_PARI
+ ip address 9.0.3.2/24
+ ip ospf cost 10
+!
+router ospf
+ network 9.0.3.0/24 area 0
+ network 9.0.9.0/24 area 0
+ network 9.154.0.0/24 area 0
+ network 9.200.0.0/24 area 0
+ network 9.200.1.0/24 area 0
+!
+line vty
+!
+end

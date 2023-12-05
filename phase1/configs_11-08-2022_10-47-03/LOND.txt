@@ -1,0 +1,46 @@
+Building configuration...
+
+Current configuration:
+!
+frr version 7.2.1
+frr defaults traditional
+hostname LOND_router
+no ipv6 forwarding
+!
+interface dns_9
+ ip address 198.0.0.9/24
+!
+interface host
+ ip address 9.101.0.2/24
+!
+interface lo
+ ip address 9.151.0.1/24
+!
+interface port_BOST
+ ip address 9.0.7.1/24
+ ip ospf cost 60
+!
+interface port_NEWY
+ ip address 9.0.8.1/24
+ ip ospf cost 25
+!
+interface port_PARI
+ ip address 9.0.4.2/24
+ ip ospf cost 10
+!
+interface port_ZURI
+ ip address 9.0.2.2/24
+ ip ospf cost 20
+!
+router ospf
+ network 9.0.2.0/24 area 0
+ network 9.0.4.0/24 area 0
+ network 9.0.7.0/24 area 0
+ network 9.0.8.0/24 area 0
+ network 9.101.0.0/24 area 0
+ network 9.151.0.0/24 area 0
+ network 198.0.0.0/24 area 0
+!
+line vty
+!
+end
